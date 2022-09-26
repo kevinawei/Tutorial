@@ -1,0 +1,36 @@
+body{ 
+    font-family: 'Inter', sans-serif;
+}
+
+p{
+    margin: 0 18% 0 2.5%;
+    color: #23395B;
+    font-size: 18px;
+}
+
+h1{
+    color: #406E8E;
+    font-size: 40px;
+}
+
+h2{
+    font-size:24px;
+    color:#6599be;
+}
+
+img {
+    margin-left: 28%;
+}
+
+.big{
+    margin-left: 10%;
+}
+
+h5{
+    margin-left: 37.5%;
+    font-size: 20px;
+}
+
+.p3{
+    margin-left: 25%;
+}

@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Computer Vision in Basketball</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
+    <script src='main.js'></script>
+</head>
+
+<body>
+    <h1>Computer Vision in Basketball</h1>
+    <h3>By Kevin Wei</h3>
+    <h3>CS 663</h3>
+    <h1>Table of Contents</h1>
+    <ul class="toc">
+        <a href = "p1.html"><li>Computer Vision in Sports</a>
+            <ul>
+                <li>Applications</li>
+                <li>Issues and areas of interest</li>
+            </ul>
+
+        </li>
+        <a href = "p2.html"><li>Scoring Detection </a>
+            <ul>
+                <li>Hoop Detection using YOLO</li>
+                <li>Frame difference scoring detector</li>
+                <li>Analysis of techniques</li>
+                <li>Conclusions</li>
+            </ul>
+        </li>
+        <a href = "p3.html"><li>Player Detections </a>
+            <ul>
+                <li>Identifying player heads</li>
+                <li>Camera calibrations</li>
+                <li>Analysis of techniques</li>
+                <li>Conclusions</li>
+            </ul>
+
+        </li>
+        <a href="bib.html"<li>References</li></a>
+    </ul>
+    <h1>Introduction</h1>
+    <img width = 745px src="local/p11.gif">
+    <h5><a href="bib.html">[1] </a>Figure 1: Player Tracking (Dwivedi 2019)</h5>
+    <p>Computer vision in basketball has many proposed uses, from automated scoring/highlight detection to individual player detection. 
+    For as long as sports highlights have existed, people have had to sift through the entirety of games in order to pick out highlight worthy plays, whether it be for a television broadcast or a Youtube highlight video. 
+    Thus it is a highly coveted goal in basketball and sports media to be able to automatically detect highlights and automate the entire process of making these highlight reels. 
+    One of the key factors at play here to achieve this goal are to be able to identify objects, e.g. the ball, specific players, the hoop, positions on the court, etc. 
+    Once that is accomplished, we must also be able to identify a missed shot versus a made shot and then be able to classify what kind of shot it was based on the player’s position. 
+    Neither of these goals are particularly simple feats to achieve, but it would save sports media workers many hours per season if such an automated highlight making system were to be implemented. 
+    A similar but slightly altered version of the project could also be used in order to facilitate basketball training. For example, a log of a player’s shots over the course of a practice session could be generated with useful data to help players improve and learn their weaknesses and strengths. 
+    In this tutorial, we will start by going over some methods that are used in overall sports broadcasting, refereeing, and training before going through a few existing systems that are designed for specifically basketball oriented goals such as scoring detection and player tracking.</p>
+
+   <br />
+    
+</body>
+</html>
+
+
+
+
+
+
