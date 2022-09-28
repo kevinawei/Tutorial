@@ -24,17 +24,17 @@
     <h1 id = "score">Scoring Detection in Basketball</h1>
     <p>We will now look more closely at a specific example of basketball scoring detection using CNN. The goal of this system is to be able to detect when a basket has been scored by first detecting the position of the hoop, applying a greyscale filter on the hoop, and then using frame difference to detect changes in the appearance of the hoop due to the introduction of the ball into the frame. </p>
     <h1>Hoop detection using YOLO</h1>
-    <img class="big"src="local/f10.jpg" width="1200px">
+    <img src="local/f10.jpg" width="1200px">
     <h5><a href="bib.html">[3]</a>Figure 6: YOLO hoop detection framework (Fu 2021)</h5>
     <p>This system takes video clips of basketball courts with the hoop in frame as inputs. Once the hoop's position has been located with YOLO, the system knows that it will not move. In this case they are assuming that the camera angle remains fixed and there is only one camera in use. For each input frame fed to the YOLO detector which is scaled to 3 different sizes with 3 different anchors for detection.  </p>
     <h1>Frame difference scoring detector</h1>
-    <img class="big"src="local/f5.jpg" width="1200px">
+    <img src="local/f5.jpg" width="1200px">
     <p>After the system has determined the location of the hoop, the following steps need only hone in on the area of the frame which contains the hoop and its direct surroundings. The current frame and the direct background are fed through 2 gates. Gate 1 translates the values of each pixel in the frame into binard and Gate 2 selects the holes which results from the image differences. The result is the largest hole which has been extracted and isolated which can be identified as the ball going through the hoop.</p>
     <h5><a href="bib.html">[3]</a>Figure 7: Frame difference scoring detector pipeline (Fu 2021)</h5>
     <h1>Analysis of techniques</h1>
     <p></p>
     <img src="local/f9.jpg" width="800px">
     <h5><a href="bib.html">[3]</a>Figure 8: Hoop detection results (Fu 2021)</h5>
-
+<div class="spacer"></div>
 </body>
 </html>

@@ -32,9 +32,9 @@
         <ul>
             <li>
                 <h3>Camera calibration and tracking</h3>
-                <img width = 720px src = "local/f1.JPG">
+                <img width = 780px src = "local/f1.JPG">
                 <h5><a href="bib.html">[2] </a></h5>
-                <p>The camera, evidently, is incredibly important in any computer vision problem. 
+                <p>The camera is incredibly important in any computer vision problem. 
                     Thus, systems must take into account the various camera angles used during a broadcast as well as the changing tilt, pan and zoom of the broadcast cameras.
                      Another factor is the position of the camera in the reference of the sports field. 
                      Some systems even utilize sensors and gyroscopes to have the most accurate data on the movement and tilt of the broadcast camera at all times. 
@@ -48,10 +48,10 @@
                 <h5><a href="bib.html">[2] </a>Player detection and tracking in rugby</h5>
                 <p>While attempting to track players, the first step in accomplishing this is to be able to determine the position of players on a field at any given
                      moment. Some less automated systems rely on human assistance and require operators to manually click on players' feet. Others use techniques 
-                     that allow the systems to differentiate between segments of the broadcast screen which are likely to have players in them at certain parts o
-                     f a broadcast. Thus, analysis and data on how players move is very helpful in achieving more accurate player tracking. 
-                     If it is known how players are likely to move and where they are likely to appear at certain points in a game, systems can more accurately i
-                     dentify the locations of players. 
+                     that allow the systems to differentiate between segments of the broadcast screen which are likely to have players in them at certain parts of
+                     a broadcast. Thus, analysis and data on how players move is very helpful in achieving more accurate player tracking. 
+                     If it is known how players are likely to move and where they are likely to appear at certain points in a game, systems can more accurately identify
+                     the locations of players. 
                 </p>
               
             </li>
@@ -73,13 +73,13 @@
         </ul>
         <div class="spacer"></div>
 <h2>Issues</h2>
-<img width = 700px src="local/f4.jpg" width="475px">
+<img width = 750px src="local/f4.jpg" width="475px">
 <h5><a href="bib.html">[2] </a>Video assistant referee in soccer</h5>
 <p>The introduction of computer vision into sports has been seen mostly as a positive thing, but there are also sceptics on it's impact for refereeing. Many sports have employed virtual referees that use computer vision technologies to more accurately make decisions at certain points in games. For example if a soccer ball crossed the goal line or who the ball last touched before it went out of bounds. Many see the more accurate refereeing as a good thing, while others argue that uncertainty should remain part of the game and that the over reliance on technology makes the sports less accessible to a wider audience.</p>
 <div class="spacer"></div>
 <h2>Current research ideas</h2>
-<p>While player detection can be very accurate with a static camera and background, there is still work to do for achieving better real time performance for broadcasts with very dynamic view shifts. When trying to apply things such as trained classifiers, which are widely used for pedestrian detection, we find that sports players are much more dynamic in their movements and are always appearing at different distances and view-points throughout games. which limits the effectiveness of such a system.
-    In regards to ball tracking, current systems have achieved good results by honing in on areas with a lot of movement before actually attempting to classify it as a ball or not, but often times the ball can be obfuscated by players or other objects in the broadcast. In this case detection needs to be combined with tracking in order to simulate the trajectory of a ball even when it is out of sight. 
+<p>While player detection can be very accurate with a static camera and background, there is still work to do for achieving better real time performance for broadcasts with very dynamic view shifts. When trying to apply things such as trained classifiers, which are widely used for pedestrian detection, we find that sports players are much more dynamic in their movements and are always appearing at different distances and view-points throughout games which limits the effectiveness of such a system.
+    In regards to ball tracking, current systems have achieved good results by honing in on areas with a lot of movement before actually attempting to classify areas of interest as a ball or not, but often times the ball can be obfuscated by players or other objects in the broadcast. In this case detection needs to be combined with tracking in order to simulate the trajectory of a ball even when it is out of sight. 
 </p>
 <div class="spacer"></div>
 </body>

@@ -20,7 +20,8 @@ h2{
     text-align: center;
 }
 img {
-    margin-left: 30%;
+    display: block;
+margin: 0 auto;
 }
 
 .big{
@@ -103,4 +104,8 @@ h3{
 
 .spacer{
     height:100px;
+}
+video{
+    display: block;
+margin: 0 auto;
 }
