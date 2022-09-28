@@ -10,35 +10,17 @@
 
 </head>
 <body>
-    <h1>Table of Contents</h1>
-    <ul class="toc">
-        <a href = "index.html">Home</a>
-        <a href = "p1.html"><li>Computer Vision in Sports</a>
-            <ul>
-                <li>Applications</li>
-                <li>Issues and areas of interest</li>
-            </ul>
-
-        </li>
-        <a href = "p2.html"><li>Scoring Detection </a>
-            <ul>
-                <li>Hoop Detection using YOLO</li>
-                <li>Frame difference scoring detector</li>
-                <li>Analysis of techniques</li>
-                <li>Conclusions</li>
-            </ul>
-        </li>
-        <a href = "p3.html"><li>Player Detections </a>
-            <ul>
-                <li>Identifying player heads</li>
-                <li>Camera calibrations</li>
-                <li>Analysis of techniques</li>
-                <li>Conclusions</li>
-            </ul>
-
-        </li>
-        <a href="bib.html"<li>References</li></a>
-    </ul>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <a href = "index.html"><li>Introduction</a>
+          <a href = "p1.html"><li>Computer Vision in Sports</a>
+          <a href = "p2.html"><li>Scoring Detection</a>
+        
+            <a href = "p3.html"><li>Player Detection/Player Tracking</a>
+                <a href="bib.html"><li>References</li></a>
+        </ul>
+      </nav>
 <h1 id = "sports">Computer Vision in Sports (Overview)</h1>
 
 <h2>Current Applications</h2>
@@ -46,10 +28,11 @@
         of players. Computer vision is also used in tracking statistics as well as for automated refereeing systems for sports like baseball and soccer. 
         Here we'll discuss some of the broader techniques that are being used before diving into more specifically basketball related systems. 
     </p>
+    <div class="spacer"></div>
         <ul>
             <li>
                 <h3>Camera calibration and tracking</h3>
-                <img src = "local/f1.JPG">
+                <img width = 720px src = "local/f1.JPG">
                 <h5><a href="bib.html">[2] </a></h5>
                 <p>The camera, evidently, is incredibly important in any computer vision problem. 
                     Thus, systems must take into account the various camera angles used during a broadcast as well as the changing tilt, pan and zoom of the broadcast cameras.
@@ -58,9 +41,10 @@
                 </p>
                 
             </li>
+            <div class="spacer"></div>
             <li>
                 <h3>Player detection and tracking</h3>
-                <img width = 700px src = "local/f2.JPG">
+                <img width = 720px src = "local/f2.JPG">
                 <h5><a href="bib.html">[2] </a>Player detection and tracking in rugby</h5>
                 <p>While attempting to track players, the first step in accomplishing this is to be able to determine the position of players on a field at any given
                      moment. Some less automated systems rely on human assistance and require operators to manually click on players' feet. Others use techniques 
@@ -71,9 +55,10 @@
                 </p>
               
             </li>
+            <div class="spacer"></div>
             <li>
                 <h3>Ball Tracking</h3>
-                <img src = "local/f3.JPG">
+                <img width = 720px src = "local/f3.JPG">
                 <h5><a href="bib.html">[2] </a></h5>
                 <p> Another main point of interest is being able to accurately track the location of the ball with low latency. 
                     Many broadcasts for sports such as baseball and tennis have instant replays of trajectories of balls that need to be accurate and provided at amoments notice. For ball tracking, systems generally rely on a large array of cameras, sometimes up to 10, with different angles and at
@@ -86,15 +71,16 @@
                 
             </li>
         </ul>
+        <div class="spacer"></div>
 <h2>Issues</h2>
 <img width = 700px src="local/f4.jpg" width="475px">
 <h5><a href="bib.html">[2] </a>Video assistant referee in soccer</h5>
 <p>The introduction of computer vision into sports has been seen mostly as a positive thing, but there are also sceptics on it's impact for refereeing. Many sports have employed virtual referees that use computer vision technologies to more accurately make decisions at certain points in games. For example if a soccer ball crossed the goal line or who the ball last touched before it went out of bounds. Many see the more accurate refereeing as a good thing, while others argue that uncertainty should remain part of the game and that the over reliance on technology makes the sports less accessible to a wider audience.</p>
-
+<div class="spacer"></div>
 <h2>Current research ideas</h2>
 <p>While player detection can be very accurate with a static camera and background, there is still work to do for achieving better real time performance for broadcasts with very dynamic view shifts. When trying to apply things such as trained classifiers, which are widely used for pedestrian detection, we find that sports players are much more dynamic in their movements and are always appearing at different distances and view-points throughout games. which limits the effectiveness of such a system.
     In regards to ball tracking, current systems have achieved good results by honing in on areas with a lot of movement before actually attempting to classify it as a ball or not, but often times the ball can be obfuscated by players or other objects in the broadcast. In this case detection needs to be combined with tracking in order to simulate the trajectory of a ball even when it is out of sight. 
 </p>
-
+<div class="spacer"></div>
 </body>
 </html>

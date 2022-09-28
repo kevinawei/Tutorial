@@ -9,52 +9,46 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400&family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
-    <h1>Table of Contents</h1>
-    <ul class="toc">
-        <a href = "index.html">Home</a>
-        <a href = "p1.html"><li>Computer Vision in Sports</a>
-            <ul>
-                <li>Applications</li>
-                <li>Issues and areas of interest</li>
-            </ul>
-
-        </li>
-        <a href = "p2.html"><li>Scoring Detection </a>
-            <ul>
-                <li>Hoop Detection using YOLO</li>
-                <li>Frame difference scoring detector</li>
-                <li>Analysis of techniques</li>
-                <li>Conclusions</li>
-            </ul>
-        </li>
-        <a href = "p3.html"><li>Player Detections </a>
-            <ul>
-                <li>Identifying player heads</li>
-                <li>Camera calibrations</li>
-                <li>Analysis of techniques</li>
-                <li>Conclusions</li>
-            </ul>
-
-        </li>
-        <a href="bib.html"<li>References</li></a>
-    </ul>
+    <nav id='menu'>
+        <input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+        <ul>
+            <a href = "index.html"><li>Introduction</a>
+          <a href = "p1.html"><li>Computer Vision in Sports</a>
+          <a href = "p2.html"><li>Scoring Detection</a>
+        
+            <a href = "p3.html"><li>Player Detection/Player Tracking</a>
+            <a href="bib.html"><li>References</li></a>
+        </ul>
+      </nav>
+      <h1>Player Detection/Player Tracking</h1>
     <h1>Framework Overview</h1>
     <img  width = 600px src="local/f11.jpg">
     <h5><a href="bib.html">[4]</a> Framework Diagram</h5>
     <p></p>
     <h1 id = "player">Player Detection in Basketball</h1>
     <h2>Identifying player heads</h2>
-    <img class="big"src="local/f7.jpg" width="800px">
-    <h5 class = "p3"><a href="bib.html">[4]</a>Figure 9: Player head detection</h5>
+    <img src="local/f7.jpg" width="650px">
+    <h5><a href="bib.html">[4]</a>Figure 9: Player head detection</h5>
+    <p>After the image has been acquired and pre-processed, the following step is the identification of players' heads in the frame. This is achived by approximating the contour and shape of players in the binary foreground image. The highest such point can be marked as the direct top of a players head. 
+        This is essentially a classification problem where after detecting potential candidate points, the systems classifies them as head or non-head. Certain other body parts such as a raised arm could raise false positives which can be 
+    </p>
+   
+    
     <h2>Video of player detection running</h2>
-    <video width="1500" height="820" controls>
+    <video width="1200" height="820" controls>
         <source src="local/Video1.MP4" type="video/mp4">
       Your browser does not support the video tag.
       </video>
     <h2>Camera calibrations</h2>
     <img class="big"src="local/f6.jpg" width="1000px">
     <h5 class = "p3"><a href="bib.html">[4]</a>Figure 10: Calibration of camera</h5>
-    <h2>Analysis of techniques</h2>
+    <p>Camera callibration is important as the system is using multiple cameras in order to recreate the 3D area of the court. This is vital in transforming the image coordinates from the head detection step to global coordinates that correspond to the dimensions of the court. </p>
+    
+    <h2>Results</h2>
+    <video width="1200" height="820" controls>
+        <source src="local/Video 5.MP4" type="video/mp4">
+      Your browser does not support the video tag.
+      </video>
     <h2>Conclusions</h2>
 </body>
 </html>
