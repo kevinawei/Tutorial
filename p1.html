@@ -18,6 +18,7 @@
           <a href = "p2.html"><li>Scoring Detection</a>
         
             <a href = "p3.html"><li>Player Detection/Player Tracking</a>
+                <a href="conclusion.html"><li>Conclusion</li></a>
                 <a href="bib.html"><li>References</li></a>
         </ul>
       </nav>
@@ -28,38 +29,41 @@
         of players. Computer vision is also used in tracking statistics as well as for automated refereeing systems for sports like baseball and soccer. 
         Here we'll discuss some of the broader techniques that are being used before diving into more specifically basketball related systems. 
     </p>
-    <div class="spacer"></div>
+<br / >
         <ul>
             <li>
                 <h3>Camera calibration and tracking</h3>
-                <img width = 780px src = "local/f1.JPG">
-                <h5><a href="bib.html">[2] </a></h5>
+                <img width = 680px src = "local/f1.JPG">
+                <h5><a href="bib.html">[2] </a>Player detection/tracking in rugby</h5>
                 <p>The camera is incredibly important in any computer vision problem. 
                     Thus, systems must take into account the various camera angles used during a broadcast as well as the changing tilt, pan and zoom of the broadcast cameras.
                      Another factor is the position of the camera in the reference of the sports field. 
-                     Some systems even utilize sensors and gyroscopes to have the most accurate data on the movement and tilt of the broadcast camera at all times. 
+                     Some systems even utilize sensors and gyroscopes to have the most accurate data on the movement and tilt of the broadcast camera at all times. Another issue that must be addressed is that the broadcast is not always focused on the game, there are often 
+                     breaks in action where the broadcast will jump to a graphic overlay or to the commentators, which can throw off certain detection models.
                 </p>
                 
             </li>
-            <div class="spacer"></div>
+            <br / >
             <li>
                 <h3>Player detection and tracking</h3>
-                <img width = 720px src = "local/f2.JPG">
+                <img width = 620px src = "local/f2.JPG">
                 <h5><a href="bib.html">[2] </a>Player detection and tracking in rugby</h5>
                 <p>While attempting to track players, the first step in accomplishing this is to be able to determine the position of players on a field at any given
                      moment. Some less automated systems rely on human assistance and require operators to manually click on players' feet. Others use techniques 
                      that allow the systems to differentiate between segments of the broadcast screen which are likely to have players in them at certain parts of
                      a broadcast. Thus, analysis and data on how players move is very helpful in achieving more accurate player tracking. 
                      If it is known how players are likely to move and where they are likely to appear at certain points in a game, systems can more accurately identify
-                     the locations of players. 
+                     the locations of players. This can often be quite difficult to achieve however because athletes often have very complicated and erratic patterns of movement that can be hard to track let alone predict.
+                     The issue of player tracking and differentiating between players is also a field of interest, however there are unique challenges that arise in this case as well. Players often appear very similar in a broadcast to each other, be it because of the camera distance from players making it hard to distinguish individuals' features or
+                     the fact that players on the same team will be wearing the same uniform. Systems can use context such as jersey numbers to combat these issues but that is far from ideal, as jersey numbers are not always in view.
                 </p>
               
             </li>
-            <div class="spacer"></div>
+            <br / >
             <li>
                 <h3>Ball Tracking</h3>
-                <img width = 720px src = "local/f3.JPG">
-                <h5><a href="bib.html">[2] </a></h5>
+                <img width = 620px src = "local/f3.JPG">
+                <h5><a href="bib.html">[2] </a>Ball trajectory overlay in cricket</h5>
                 <p> Another main point of interest is being able to accurately track the location of the ball with low latency. 
                     Many broadcasts for sports such as baseball and tennis have instant replays of trajectories of balls that need to be accurate and provided at amoments notice. For ball tracking, systems generally rely on a large array of cameras, sometimes up to 10, with different angles and at
                     very high frame rates to achieve the most accurate and lowest latency ball tracking. The systems also use information about the size of the ball,
@@ -71,7 +75,7 @@
                 
             </li>
         </ul>
-        <div class="spacer"></div>
+        <br / >
 <h2>Issues</h2>
 <img width = 750px src="local/f4.jpg" width="475px">
 <h5><a href="bib.html">[2] </a>Video assistant referee in soccer</h5>
@@ -82,5 +86,8 @@
     In regards to ball tracking, current systems have achieved good results by honing in on areas with a lot of movement before actually attempting to classify areas of interest as a ball or not, but often times the ball can be obfuscated by players or other objects in the broadcast. In this case detection needs to be combined with tracking in order to simulate the trajectory of a ball even when it is out of sight. 
 </p>
 <div class="spacer"></div>
+<a href="p2.html"><button class="btn" >Next page: Scoring detection in basketball</button></a>
+   <br />
+   <br />
 </body>
 </html>
