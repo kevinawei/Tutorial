@@ -22,7 +22,7 @@
                 <a href="bib.html"><li>References</li></a>
         </ul>
       </nav>
-    <h1 id = "score">Scoring Detection in Basketball</h1>
+    <h1>Scoring Detection in Basketball</h1>
     <p>We will now look more closely at a specific example of basketball scoring detection using CNN. The goal of this system is to be able to detect when a basket has been scored by first detecting the position of the hoop, applying a greyscale filter on the hoop, and then using frame difference to detect changes in the appearance of the hoop due to the introduction of the ball into the frame. </p>
     <br / >
     <h1>Hoop detection using YOLO</h1>
@@ -33,14 +33,14 @@
     <h1>Frame difference scoring detector</h1>
     <img src="local/f5.jpg" width="1200px">
     <h5><a href="bib.html">[3]</a>Figure 7: Frame difference scoring detector pipeline (Fu 2021)</h5>
-    <p>After the system has determined the location of the hoop, the following steps need only hone in on the area of the frame which contains the hoop and its direct surroundings. The current frame and the direct background are fed through 2 gates. Gate 1 translates the values of each pixel in the frame into a binary result and Gate 2 selects the holes which results from the image differences. For binary translation, pixels of objects which are in motion are marked as 1 and objects that remain stationary are marked as 0. The result is the largest hole which has been extracted and isolated which can be identified as the ball. The final step is to determine whether the object which has been detected as moving goes through the red box which marks the hoop from the previous step.</p>
+    <p>After the system has determined the location of the hoop, the following steps need only hone in on the area of the frame which contains the hoop and its direct surroundings. The current frame and the direct background are fed through 2 gates. Gate 1 translates the values of each pixel in the frame into a binary result and Gate 2 selects the holes which result from the image differences. For binary translation, pixels of objects which are in motion are marked as 1 and objects that remain stationary are marked as 0. The result is the largest hole which has been extracted and isolated which can be identified as the ball. The final step is to determine whether the object which has been detected as moving goes through the red box which marks the hoop from the previous step.</p>
     
     <h1>Analysis of techniques</h1>
     <img src="local/f9.jpg" width="1200px">
     <h5><a href="bib.html">[3]</a>Figure 8: Hoop detection results (Fu 2021)</h5>
-    <p>An expansive dataset of basketball hoops were utilized for training as well as videos of realtime basketball games being played from a fixed camera angle. The YOLO hoop detector used in the experiments was pretrained on the COCO dataset and given further training data from the aforementioned basketball hoop images. The learning rate is initially set to 1*10^-4 and then lowered after 20 epochs to 1*10^-6. In addition, k-means clustering was utilized in order to find the optimal anchor values. </p>
+    <p>An expansive dataset of basketball hoops were utilized for training as well as videos of real time basketball games being played from a fixed camera angle. The YOLO hoop detector used in the experiments was pretrained on the COCO dataset and given further training data from the aforementioned basketball hoop images. The learning rate is initially set to 1*10^-4 and then lowered after 20 epochs to 1*10^-6. In addition, k-means clustering was utilized in order to find the optimal anchor values. </p>
     <br />
-    <p>In testing, the YOLO hoop detector was able to succesfully identify basketball hoops with an accuracy of 88.64%, with many of the failed examples being images with hoops that were either very close to the camera or very far away. They also found that input images of size 544 x 544 yielded the highest accuracy when compared to other image sizes for their given dataset. Ultimately with all of these adjustments, this YOLO hoop detector achieved better results than a RCNN based detector as well as a SSD based detector with faster results (which is very important for real-time systems).</p>
+    <p>In testing, the YOLO hoop detector was able to successfully  identify basketball hoops with an accuracy of 88.64%, with many of the failed examples being images with hoops that were either very close to the camera or very far away. They also found that input images of size 544 x 544 yielded the highest accuracy when compared to other image sizes for their given dataset. Ultimately with all of these adjustments, this YOLO hoop detector achieved better results than a RCNN based detector as well as a SSD based detector with faster results (which is very important for real-time systems).</p>
     <img src="local/f12.JPG" width="800px">
     <h5><a href="bib.html">[3]</a>Comparison of accuracy between different models</h5>
 <div class="spacer"></div>

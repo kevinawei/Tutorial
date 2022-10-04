@@ -32,8 +32,8 @@
     <h5><a href="bib.html">[4]</a>Figure 9: Player head detection</h5>
     <p>After the image has been acquired and pre-processed, the following step is the identification of players' heads in the frame. 
       This is achived by approximating the contour and shape of players in the binary foreground image. The highest such point can be marked as the direct top of a players head. 
-        This is essentially a classification problem where after detecting potential candidate points, the systems classifies them as head or non-head. 
-        Certain other body parts such as a raised arm or the ball which could raise false positives. Thus the candidate points are only taken into account if they appear inside a specific area of interest. 
+        This is essentially a classification problem where after detecting potential candidate points, the system classifies them as head or non-head. 
+        Certain other body parts such as a raised arm or the ball could raise false positives. Thus the candidate points are only taken into account if they appear inside a specific area of interest. 
         This removes the variance that comes with spectators, referees, and other objects in the area outside of the court.
     </p>
     <p>The arcitecture used by the system is a multilayer perceptron feed-forward network with 10 hidden neurons in each hidden layer. This neural network was trained with back-propagation and was given a training set of 30,000 labeled samples. </p>
@@ -46,7 +46,7 @@
     <h2>Camera calibrations</h2>
     <img src="local/f6.jpg" width="1000px">
     <h5><a href="bib.html">[4]</a>Figure 10: Calibration of camera</h5>
-    <p>Camera callibration is important as the system is using multiple cameras in order to recreate the 3D area of the court. 
+    <p>Camera calibration is important as the system is using multiple cameras in order to recreate the 3D area of the court. 
       This is vital in transforming the image coordinates from the head detection step to global coordinates that correspond to the dimensions of the court. 
       The lines on the court can be used as reference points in this process of reconstruction. 
       This reconstruction is important as the system needs a base to be able to place the detected locations of the players onto. The process of estimating the positions of the players is derived from a "constrained combinatorial optimization problem". In order to 
